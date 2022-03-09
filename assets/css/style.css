@@ -1,3 +1,22 @@
 .title {
-    background-color: lightblue
+  background-color: lightblue;
+}
+
+.info-blocks div {
+  background-color: #d3e1ff;
+  margin: 20px;
+  padding: 10px;
+}
+
+.info-blocks h3 {
+  color: #5c432f;
+}
+
+.info-blocks p {
+  color: #2f497f;
+}
+
+footer {
+  background-color: #5c432f;
+  color: #ecd9c6;
 }
