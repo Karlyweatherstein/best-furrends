@@ -82,16 +82,17 @@ nav ul li a {
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-color: #d3e1ff;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border: 5px solid #5c432f;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
   }
   
   /* The Close Button */
   .close {
-    color: #aaa;
+    color: #2f497f;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -106,6 +107,9 @@ nav ul li a {
 /* search button */
   .btn-search {
     background-color: #2f497f;
-    color: white;
+    color: #ecd9c6;
+    border-radius: 10px;
   }
-
+.btn-search:hover {
+    opacity: 80%;
+}
