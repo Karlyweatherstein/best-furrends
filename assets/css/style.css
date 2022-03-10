@@ -1,6 +1,9 @@
+* {
+  margin: 0;
+}
 
-.title {
-  background-color: lightblue;
+body {
+  background-color: #ebe6dd;
 }
 
 .info-blocks div {
@@ -17,7 +20,46 @@
   color: #2f497f;
 }
 
+header,
 footer {
   background-color: #5c432f;
   color: #ecd9c6;
+  display: flex;
+  height: 20%;
+}
+
+header h1 {
+  font-family: "Caveat Brush", cursive;
+  display: inline-block;
+  font-size: 50px;
+  margin-left: 2%;
+}
+
+nav {
+  font-family: "Hubballi", cursive;
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 10px;
+  vertical-align: center;
+  font-size: x-large;
+}
+
+nav ul li {
+  justify-content: space-between;
+  margin: 8px;
+  align-items: center;
+  padding: 4px;
+}
+
+nav ul li a {
+  list-style: none;
+  color: #87a9ed;
+  font-style: bold;
 }
