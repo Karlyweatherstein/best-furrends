@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
 }
@@ -10,15 +9,19 @@ body {
 .info-blocks div {
   background-color: #d3e1ff;
   margin: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .info-blocks h3 {
   color: #5c432f;
+  font-family: "Caveat Brush", cursive;
+  font-size: xx-large;
 }
 
 .info-blocks p {
   color: #2f497f;
+  font-family: "Hubballi", cursive;
+  font-size: larger;
 }
 
 header,
@@ -65,47 +68,44 @@ nav ul li a {
   font-style: bold;
 }
 
+#sub-head {
+  background-color: #d8bca6;
+  text-align: center;
+  padding: 6px;
+}
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-/* search button */
-  .btn-search {
-    background-color: #2f497f;
-    color: white;
-  }
+.columns {
+  justify-content: space-around;
+  margin: 2px;
+  padding: 4px;
+  align-items: center;
+}
 
+img {
+  border: #5c432f solid 4px;
+}
+
+#modalBtn {
+  text-align: center;
+}
+
+#modalBtn button {
+  background-color: #2f497f;
+  opacity: 80%;
+  color: #ecd9c6;
+  font-size: larger;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+#modalBtn button:hover {
+  background-color: #b3c2df;
+  color: #967b67;
+  box-shadow: 3px 3px 4px rgb(109, 106, 106);
+}
+
+footer {
+  font-size: x-large;
+  padding: 10px;
+}
