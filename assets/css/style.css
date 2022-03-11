@@ -1,25 +1,12 @@
-
 * {
   margin: 0;
 }
 
 body {
-  background-color: #ebe6dd;
+  background-color: #f1ece3;
 }
 
-.info-blocks div {
-  background-color: #d3e1ff;
-  margin: 20px;
-  padding: 10px;
-}
-
-.info-blocks h3 {
-  color: #5c432f;
-}
-
-.info-blocks p {
-  color: #2f497f;
-}
+/* Header  */
 
 header,
 footer {
@@ -65,9 +52,28 @@ nav ul li a {
   font-style: bold;
 }
 
+#sub-head {
+  background-color: #d8bca6;
+  text-align: center;
+  padding: 6px;
+}
 
-/* The Modal (background) */
+/* Image Row */
+
+.columns {
+  justify-content: space-around;
+  margin: 2px;
+  padding: 4px;
+  align-items: center;
+}
+
+img {
+  border: #5c432f solid 4px;
+}
+
+/* modal */
 .modal {
+
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -104,12 +110,62 @@ nav ul li a {
     text-decoration: none;
     cursor: pointer;
   }
-/* search button */
-  .btn-search {
-    background-color: #2f497f;
-    color: #ecd9c6;
-    border-radius: 10px;
-  }
-.btn-search:hover {
-    opacity: 80%;
+
+#modalBtn {
+  text-align: center;
 }
+
+#modalBtn button {
+  background-color: #5c432f;
+  opacity: 80%;
+  color: #ecd9c6;
+  font-size: larger;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+#modalBtn button:hover {
+  background-color: #b3c2df;
+  color: #967b67;
+  box-shadow: 3px 3px 4px rgb(109, 106, 106);
+}
+
+/* Box of facts and info */
+.info-blocks div {
+  background-color: rgba(165, 190, 238, 0.7);
+  margin: 20px;
+  padding: 15px;
+}
+
+.info-blocks h3 {
+  color: #5c432f;
+  font-family: "Caveat Brush", cursive;
+  font-size: xx-large;
+}
+
+.info-blocks p {
+  color: #2f497f;
+  font-family: "Hubballi", cursive;
+  font-size: larger;
+  text-align: center;
+}
+
+.info-blocks a {
+  list-style: none;
+  text-decoration: none;
+  color: #2f497f;
+}
+
+.info-blocks a:hover {
+  color: #2f497f;
+}
+
+/* footer */
+footer {
+  font-size: xx-large;
+  padding: 15px;
+}
+
+/* Below is BULMA for the modal */
+/* https://bulma.io/documentation/components/modal/#modal-card */
