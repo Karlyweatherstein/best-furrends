@@ -30,7 +30,8 @@
             </li>
           </ul>
         </nav>
-      </header>
+
+    </header>
 
       <!-- Sub header -->
       <div>
@@ -59,21 +60,33 @@
         </div>
       </div>
 
-      <!-- started messing with modal here-->
-      <div id="modalBtn" class="column is-centered">
-        <!-- Trigger/Open The Modal -->
-        <button id="myBtn" class="btn-search">Search For Furry Furrend!</button>
-      </div>
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Some text in the Modal..</p>
-        </div>
-      </div>
+    <!-- started messing with modal here-->
+    <div id="modalBtn" class="column is-centered">
 
-      <!--end messing with modal-->
+        <!-- Trigger/Open The Modal -->
+    <button id="myBtn" class="btn-search">Search For Furry Furrend!</button>
+
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+    <div class="modal-content">
+
+     <span class="close">&times;</span>
+     <label for="modalLocation">Search Location</label>
+     <input type="text" id="modalLocation">
+
+     <label for="modalBreed">Select Breed</label>
+     <input type="text" id="modalBreed">
+
+     <button type="button" class="search-btn">Search</button>
+     </div>
+    </div>
+     
+    </div>
+          <!--end messing with modal-->  
+    
+    
 
       <div class="info-blocks container">
         <div id="fun-facts" class="column is-centered">
