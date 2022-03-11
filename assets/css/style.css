@@ -72,6 +72,11 @@ img {
 }
 
 /* modal */
+.modal {
+  background-color: white;
+  size: 50px;
+}
+
 #modalBtn {
   text-align: center;
 }
@@ -127,3 +132,6 @@ footer {
   font-size: xx-large;
   padding: 15px;
 }
+
+/* Below is BULMA for the modal */
+/* https://bulma.io/documentation/components/modal/#modal-card */
