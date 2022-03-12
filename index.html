@@ -30,8 +30,7 @@
             </li>
           </ul>
         </nav>
-
-    </header>
+      </header>
 
       <!-- Sub header -->
       <div>
@@ -39,54 +38,48 @@
       </div>
 
       <!-- Row of images -->
-      <div class="columns is-1 is-centered">
+      <div class="columns is-centered" id="image-space">
         <div class="column is-narrow">
           <img
-            src="https://placedog.net/200?id=5"
+            src="https://placedog.net/320?id=5"
             alt="a husky puppy in the woods"
           />
         </div>
         <div class="column is-narrow">
           <img
-            src="https://placedog.net/200?id=6"
+            src="https://placedog.net/320?id=6"
             alt="a chocolate lab puppy looking up at the camera from an above view"
           />
         </div>
         <div class="column is-narrow">
           <img
-            src="https://placedog.net/200?id=15"
+            src="https://placedog.net/320?id=15"
             alt="Maltese puppy sitting in a grassy spot looking into the camera"
           />
         </div>
       </div>
 
-    <!-- started messing with modal here-->
-    <div id="modalBtn" class="column is-centered">
-
+      <!-- started messing with modal here-->
+      <div id="modalBtn" class="column is-centered">
         <!-- Trigger/Open The Modal -->
-    <button id="myBtn" class="btn-search">Search For Furry Furrend!</button>
+        <button id="myBtn" class="btn-search">Search For Furry Furrend!</button>
 
         <!-- The Modal -->
-    <div id="myModal" class="modal">
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <label for="modalLocation">Search Location</label>
+            <input type="text" id="modalLocation" />
 
-        <!-- Modal content -->
-    <div class="modal-content">
+            <label for="modalBreed">Select Breed</label>
+            <input type="text" id="modalBreed" />
 
-     <span class="close">&times;</span>
-     <label for="modalLocation">Search Location</label>
-     <input type="text" id="modalLocation">
-
-     <label for="modalBreed">Select Breed</label>
-     <input type="text" id="modalBreed">
-
-     <button type="button" class="search-btn">Search</button>
-     </div>
-    </div>
-     
-    </div>
-          <!--end messing with modal-->  
-    
-    
+            <button type="button" class="search-btn">Search</button>
+          </div>
+        </div>
+      </div>
+      <!--end messing with modal-->
 
       <div class="info-blocks container">
         <div id="fun-facts" class="column is-centered">

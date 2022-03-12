@@ -19,6 +19,7 @@ footer {
 header h1 {
   font-family: "Caveat Brush", cursive;
   display: inline-block;
+  overflow: hidden;
   font-size: 50px;
   margin-left: 2%;
 }
@@ -56,6 +57,8 @@ nav ul li a {
   background-color: #d8bca6;
   text-align: center;
   padding: 6px;
+  font-family: "Hubballi", cursive;
+  font-size: large;
 }
 
 /* Image Row */
@@ -69,47 +72,50 @@ nav ul li a {
 
 img {
   border: #5c432f solid 4px;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
 }
 
 /* modal */
 .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
 
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #d3e1ff;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 5px solid #5c432f;
-    width: 40%; /* Could be more or less, depending on screen size */
-    border-radius: 10px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #2f497f;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+/* Modal Content/Box */
+.modal-content {
+  background-color: #d3e1ff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 5px solid #5c432f;
+  width: 40%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+  color: #2f497f;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 #modalBtn {
   text-align: center;
@@ -123,6 +129,7 @@ img {
   border-radius: 10px;
   padding: 6px;
   box-shadow: 2px 2px 5px gray;
+  font-family: "Hubballi", cursive;
 }
 
 #modalBtn button:hover {
@@ -136,6 +143,7 @@ img {
   background-color: rgba(165, 190, 238, 0.7);
   margin: 20px;
   padding: 15px;
+  border-radius: 8px;
 }
 
 .info-blocks h3 {
@@ -165,7 +173,69 @@ img {
 footer {
   font-size: xx-large;
   padding: 15px;
+  flex-shrink: 0;
 }
 
-/* Below is BULMA for the modal */
-/* https://bulma.io/documentation/components/modal/#modal-card */
+/* Media Queries */
+
+@media screen and (max-width: 1100px) {
+  img {
+    width: 90%;
+    height: auto;
+    margin: 0 -60px;
+  }
+
+  #image-space {
+    margin-left: 147px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  img {
+    width: 60%;
+    height: auto;
+  }
+
+  #image-space {
+    margin-left: 199px;
+    margin-bottom: -12px;
+  }
+
+  header h1 {
+    font-size: 38px;
+    margin-left: 2%;
+  }
+
+  nav {
+    margin-top: 1px;
+  }
+
+  nav ul {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  img {
+    width: 60%;
+    height: auto;
+  }
+
+  #image-space {
+    margin-left: 112px;
+    margin-bottom: -12px;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin-left: 2%;
+  }
+
+  nav {
+    margin-top: -1px;
+  }
+
+  nav ul {
+    font-size: 16px;
+  }
+}
