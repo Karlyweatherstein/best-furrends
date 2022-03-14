@@ -28,17 +28,17 @@ var dogList = document.querySelector('ul');
 var fetchButton = document.getElementById('fetch-button');
 
 
-function getDogs() {
-    var requestOptions = {
-        token: "91B7D3A43B5C31EA",
-        method: 'GET',
-        redirect: 'follow'
-      };
+//function getDogs() {
+  //  var requestOptions = {
+   //     token: "91B7D3A43B5C31EA",
+   //     method: 'GET',
+   //     redirect: 'follow'
+  //    };
       
-      fetch("https://api.findadogfor.me/api/shelter/TX1399", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+   //   fetch("https://api.findadogfor.me/api/shelter/TX1399", requestOptions)
+   //     .then(response => response.text())
+ //       .then(result => console.log(result))
+  //      .catch(error => console.log('error', error));
    // var requestUrl = "https://api.petfinder.com/v2/animals?type=dog&page=2"
 
 
@@ -54,7 +54,7 @@ function getDogs() {
    //       dogList.appendChild(listItem);
    //     }
     //  });
-}
+
 
 fetchButton.addEventListener("click", getDogs);
 
