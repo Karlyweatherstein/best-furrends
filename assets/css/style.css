@@ -198,7 +198,6 @@ img {
 footer {
   font-size: xx-large;
   padding: 15px;
-  flex-shrink: 0;
 }
 
 /* Media Queries */

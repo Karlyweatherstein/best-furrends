@@ -10,6 +10,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
+  click()
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -24,41 +25,35 @@ window.onclick = function(event) {
   }
 }
 
-// Adding API for fun facts start
-// var request = new XMLHttpRequest()
 
-// function getData() {
-//  var response = fetch("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all")
-//  var data = response.JSON()
+const url = "https://api.rescuegroups.org/v5/public/animals/search/available/";
 
-//   var data = JSON.parse(this.response)
+async function getData() {
+    var raw = JSON.stringify({
+          "data": {
+            "filterRadius": {
+              "miles": 100,
+              "postalcode": 27527
+            }}});
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/vnd.api+json',
+           'Authorization': 'u2301vV9'
+        },
+       body: raw
+       
+   });
+   const data = await response.json();
+   console.log(data.data);
+}
 
-//   if (request.status >= 200 && request.status < 400) {
-//     data.forEach(fact => {
-//       console.log(fact)
-//     })
-
-//   } else {
-//     console.log("error")
-//   }
-
-// }
+function click() {
+    getData();
+}
 
 
-var getRepoIssues = function(repo) {
-  // format the github api url
-  var apiUrl = "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all";
-  // make a get request to url
-  fetch(apiUrl).then(function(response) {
-    // request was successful
-    if (response.ok) {
-      response.json().then(function(data) {
-        displayIssues(data);
-      });
-    } else {
-      displayWarning(repo);
-    }
-  });
-};
 
-getRepoIssues()
+
+
+
