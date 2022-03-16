@@ -49,9 +49,8 @@ async function getData() {
 }
 
 function click() {
-    getData();
+  getData();
 }
-
 
 
 
