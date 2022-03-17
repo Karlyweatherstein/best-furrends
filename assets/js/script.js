@@ -30,7 +30,7 @@ window.onclick = function(event) {
 
 
 
-const url = "https://api.rescuegroups.org/v5/public/animals/search/available/";
+const url = "https://api.rescuegroups.org/v5/public/animals/search/available/dogs/";
 
 async function getData() {
     var raw = JSON.stringify({
