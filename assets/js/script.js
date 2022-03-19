@@ -57,7 +57,35 @@ function click() {
 }
 
 
+//Start of Fact API 
+
+var factsArr = JSON.parse(localStorage.getItem("dogData")) || [];
 
 
+function funFacts () {
+  fetch('https://api.thedogapi.com/v1/images/search/?x-api-key=c15bb368-37c9-4f47-8908-f8d0fe483813').then(function (response) {
+      // The API call was successful!
+      return response.json();
+      
+      
+      // var randomIndex = Math.floor(Math.random() * data.length);
+      // var randomChar = data[randomIndex] 
+      // factsArr += randomChar
+      
+      
+
+    }).then(function (data) {
+      console.log(data);
+      factsArr.push(data)
+      localStorage.setItem("dogData", JSON.stringify(factsArr));
+      var displayData = document.getElementById('funFactsHere');
+      displayData.innerHTML = factsArr
+      
+    }).catch;
+
+}
+
+nextBtn.addEventListener('click', funFacts)
 
 
+//End of fact API
