@@ -69,13 +69,18 @@
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
+
             <label for="modalLocation">Search Location</label>
-            <input type="text" id="modalLocation" />
+            <input
+              type="text"
+              id="modalLocation"
+              class="locationInput"
+              placeholder="Zipcode"
+            />
 
-            <label for="modalBreed">Select Breed</label>
-            <input type="text" id="modalBreed" />
-
-            <button type="button" class="search-btn">Search</button>
+            <button type="button" id="searchbtn" class="search-btn">
+              Search
+            </button>
           </div>
         </div>
       </div>
@@ -85,13 +90,11 @@
         <div id="fun-facts" class="column has-text-centered">
           <h3 class="columns">Fun Facts!</h3>
 
-          <p class="columns">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab odio
-            maiores porro quos, perferendis ipsum! Exercitationem quos
-            recusandae delectus nisi sit dignissimos, ab nesciunt voluptas dicta
-            obcaecati cum sapiente harum.
+          <p class="columns" id="funFactsHere">
+            Click the "NEXT" button to learn some facts about your future best
+            furrend!
           </p>
-          <button type="button" class="next-btn" id="facts">Next!</button>
+          <button type="button" class="next-btn" id="nextBtn">Next!</button>
         </div>
         <div id="how-to-help" class="column">
           <h3 class="columns is-centered">How can you help!</h3>
@@ -110,6 +113,11 @@
       </footer>
     </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://use.fontawesome.com/39848496d7.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
