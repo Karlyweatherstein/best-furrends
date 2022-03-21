@@ -50,9 +50,7 @@ async function getData() {
               "miles": 50,
               "postalcode": zipcode
             }
-
         }});
-
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -116,7 +114,6 @@ function funFacts () {
   fetch('https://api.thedogapi.com/v1/images/search/?x-api-key=c15bb368-37c9-4f47-8908-f8d0fe483813/breeds').then(function (response) {
       // The API call was successful!
       return response.json();
-
     }).then(function (data) {
       console.log(data);
       factsArr.push(data)
