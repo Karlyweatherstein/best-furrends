@@ -50,7 +50,9 @@ async function getData() {
               "miles": 50,
               "postalcode": zipcode
             }
+
         }});
+
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -58,10 +60,11 @@ async function getData() {
            'Authorization': 'u2301vV9'
         },
        body: raw
-       
    });
    const data = await response.json();
    console.log(data.data);
+
+  
 
 }
 
@@ -73,33 +76,57 @@ function click() {
 
 //Start of Fact API 
 
+//Gets the stored information from local storage
 var factsArr = JSON.parse(localStorage.getItem("dogData")) || [];
 
+
+//Function that pulls API info and stores in local storage
 function funFacts () {
   fetch('https://api.thedogapi.com/v1/images/search/?x-api-key=c15bb368-37c9-4f47-8908-f8d0fe483813/breeds').then(function (response) {
       // The API call was successful!
       return response.json();
+
     }).then(function (data) {
       console.log(data);
       factsArr.push(data)
       localStorage.setItem("dogData", JSON.stringify(factsArr));
       var displayData = document.getElementById('funFactsHere');
-      displayData.innerHTML = factsArr
-      // var infoEl = document.createElement('p');
-      // infoEl.innerText = 'Weight: ${factsArr.weight}';
-      // displayData.append(infoEl);
+      displayData.innerHTML = ''
+      
+      //Creating a route to specific API info
+      var dogName = data[0].breeds[0].name
+      var dogWeight = data[0].breeds[0].weight.imperial
+      var dogHeight = data[0].breeds[0].height.imperial
+      var dogLifeSpan = data[0].breeds[0].life_span
+      var dogTemp = data[0].breeds[0].temperament
+
+
+      //creating an element for each route
+      var infoElName = document.createElement('p').innerText = 'Name: ' + dogName + ' • ' ; 
+      var infoElWeight = document.createElement('p').innerText = 'Weight: ' + dogWeight + ' pounds! • ';
+      var infoElHeight = document.createElement('p').innerText = 'Height: ' + dogHeight + ' inches! • ';
+      var infoElLife = document.createElement('p').innerText = 'Life Span: ' + dogLifeSpan + '! • ';
+      var infoElTemp = document.createElement('p').innerText = 'Temperament: ' + dogTemp + '!';
+
+
+
+      //appending the element to the page
+      displayData.append(infoElName); 
+      displayData.append(infoElWeight);
+      displayData.append(infoElHeight);
+      displayData.append(infoElLife);
+      displayData.append(infoElTemp);
+
       clearArr()
 
-
-
-  
-
+     
     }).catch;
 
 }
 
 nextBtn.addEventListener('click', funFacts)
  
+//clears out the previous fact 
 function clearArr(){
   factsArr = []
 }
