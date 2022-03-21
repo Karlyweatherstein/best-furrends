@@ -10,7 +10,6 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
-  click()
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -26,19 +25,32 @@ window.onclick = function(event) {
 }
 
 
+var searchButton = document.getElementById("searchbtn");
 
+searchButton.onclick = function(){
+    getData()
+};
 
+var btn = document.getElementById("searchbtn");
+btn.onclick = function() {
+    click()
+}
 
 
 const url = "https://api.rescuegroups.org/v5/public/animals/search/available/dogs/";
 
+
 async function getData() {
+    var locationInput = document.getElementById("modalLocation");
+ var zipcode = locationInput.value.trim();
+  
     var raw = JSON.stringify({
           "data": {
             "filterRadius": {
-              "miles": 100,
-              "postalcode": 27527
-            }}});
+              "miles": 50,
+              "postalcode": zipcode
+            }
+        }});
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -50,14 +62,10 @@ async function getData() {
    });
    const data = await response.json();
    console.log(data.data);
+
 }
 
 function click() {
     getData();
 }
-
-
-
-
-
 
