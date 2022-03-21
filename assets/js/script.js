@@ -64,9 +64,44 @@ async function getData() {
    const data = await response.json();
    console.log(data.data);
 
-  
+  function generateCards () {
+    var breed = data.data[0].attributes.breedPrimary;
+    var age = data.data[0].attributes.ageString;
+    var description = data.data[0].attributes.descriptionText;
+    var dogImage = data.data[0].attributes.pictureThumbnailUrl;
+    var distance = data.data[0].attributes.distance;
+
+
+    console.log(breed)
+    console.log(age)
+    console.log(description)
+    console.log(dogImage)
+    console.log(distance)
+
+    
+    
+    var dogImageEl = document.getElementsByClassName('.card-image').innerText = dogImage;
+
+    var breedEl = document.getElementById('breed').innerText = 'Breed: ' + breed; 
+    var ageEl = document.getElementById('age').innerText = 'Age: ' + age;
+    var distanceEl = document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles';
+    var descriptionEl = document.getElementById('description').innerText = description;
+
+
+    displayCard.append(dogImageEl); 
+    displayCard.append(breedEl); 
+    displayCard.append(ageEl); 
+    displayCard.append(distanceEl); 
+    displayCard.append(descriptionEl); 
+
+
+
+  }
+  generateCards()
+    
 
 }
+
 
 function click() {
   getData();
