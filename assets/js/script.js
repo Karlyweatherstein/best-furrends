@@ -63,32 +63,33 @@ async function getData() {
    console.log(data.data);
 
   function generateCards () {
-    // var randomArr = data.data[]
+    //this loops and shows 10 availble pets in the console
+    for (i = 0; i < 10; i++) {
+      var randomArr = data.data[i]
+        var breed = randomArr.attributes.breedPrimary;
+        var age = randomArr.attributes.ageString;
+        var description = randomArr.attributes.descriptionText;
+        var dogImage = randomArr.attributes.pictureThumbnailUrl;
+        var distance = randomArr.attributes.distance;
 
 
-    var breed = data.data[1].attributes.breedPrimary;
-    var age = data.data[1].attributes.ageString;
-    var description = data.data[1].attributes.descriptionText;
-    var dogImage = data.data[1].attributes.pictureThumbnailUrl;
-    var distance = data.data[1].attributes.distance;
+        console.log(breed)
+        console.log(age)
+        console.log(description)
+        console.log(dogImage)
+        console.log(distance)
 
+        
+        //this pulls speicifc data from the API and displays it in its designated element
+        var dogImageEl = document.getElementById('dogImg').innerText = dogImage;
+        var breedEl = document.getElementById('breed').innerText = 'Breed: ' + breed; 
+        var ageEl = document.getElementById('age').innerText = 'Age: ' + age;
+        var distanceEl = document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
+        var descriptionEl = document.getElementById('description').innerText = description;
 
-    console.log(breed)
-    console.log(age)
-    console.log(description)
-    console.log(dogImage)
-    console.log(distance)
-
+    }
     
-    
-    var dogImageEl = document.getElementById('dogImg').innerText = dogImage;
-    var breedEl = document.getElementById('breed').innerText = 'Breed: ' + breed; 
-    var ageEl = document.getElementById('age').innerText = 'Age: ' + age;
-    var distanceEl = document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
-    var descriptionEl = document.getElementById('description').innerText = description;
-
-
-
+    // this closes the modal after the search is generated
     span.onclick()
   }
   generateCards()

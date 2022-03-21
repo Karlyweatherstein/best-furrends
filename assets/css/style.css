@@ -144,6 +144,10 @@ img {
   background-color: #f1ece3;
 }
 
+#dogImg {
+  list-style: none;
+}
+
 /* Box of facts and info */
 .info-blocks div {
   background-color: rgba(165, 190, 238, 0.7);
