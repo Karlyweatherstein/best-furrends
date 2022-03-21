@@ -65,11 +65,14 @@ async function getData() {
    console.log(data.data);
 
   function generateCards () {
-    var breed = data.data[0].attributes.breedPrimary;
-    var age = data.data[0].attributes.ageString;
-    var description = data.data[0].attributes.descriptionText;
-    var dogImage = data.data[0].attributes.pictureThumbnailUrl;
-    var distance = data.data[0].attributes.distance;
+    // var randomArr = data.data[]
+
+
+    var breed = data.data[1].attributes.breedPrimary;
+    var age = data.data[1].attributes.ageString;
+    var description = data.data[1].attributes.descriptionText;
+    var dogImage = data.data[1].attributes.pictureThumbnailUrl;
+    var distance = data.data[1].attributes.distance;
 
 
     console.log(breed)
@@ -80,22 +83,15 @@ async function getData() {
 
     
     
-    var dogImageEl = document.getElementsByClassName('.card-image').innerText = dogImage;
-
+    var dogImageEl = document.getElementById('dogImg').innerText = dogImage;
     var breedEl = document.getElementById('breed').innerText = 'Breed: ' + breed; 
     var ageEl = document.getElementById('age').innerText = 'Age: ' + age;
-    var distanceEl = document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles';
+    var distanceEl = document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
     var descriptionEl = document.getElementById('description').innerText = description;
 
 
-    displayCard.append(dogImageEl); 
-    displayCard.append(breedEl); 
-    displayCard.append(ageEl); 
-    displayCard.append(distanceEl); 
-    displayCard.append(descriptionEl); 
 
-
-
+    span.onclick()
   }
   generateCards()
     
