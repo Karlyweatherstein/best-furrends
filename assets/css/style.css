@@ -141,7 +141,10 @@ img {
 /* Search results */
 #resultsHere {
   margin: 40px;
-  background-color: #f1ece3;
+  background-color: #5c432f;
+  color: #ecd9c6;
+  font-family: "Hubballi", cursive;
+  width: 75vw;
 }
 
 #dogImg {

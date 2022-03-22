@@ -35,7 +35,7 @@ var btn = document.getElementById("searchbtn");
 btn.onclick = function() {
     click()
 }
-
+var toggleCard = document.querySelector('#resultsHere');
 
 const url = "https://api.rescuegroups.org/v5/public/animals/search/available/dogs/";
 
@@ -88,12 +88,15 @@ async function getData() {
         var descriptionEl = document.getElementById('description').innerText = description;
 
     }
+
+
+
+    
     
     // this closes the modal after the search is generated
     span.onclick()
   }
   generateCards()
-    
 
 }
 
