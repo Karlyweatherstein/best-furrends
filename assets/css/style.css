@@ -140,12 +140,18 @@ img {
 
 /* Search results */
 #resultsHere {
-  margin: 40px;
+  margin: 35px auto;
   background-color: #5c432f;
   color: #ecd9c6;
   font-family: "Hubballi", cursive;
-  width: 75vw;
+  font-size: larger;
+  width: 30vw;
   display: none;
+}
+
+#resultsHere img {
+  border: #382c22 solid 4px;
+  box-shadow: 3px 3px 4px rgb(49, 39, 27);
 }
 
 #dogImg {

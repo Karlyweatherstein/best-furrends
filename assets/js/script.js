@@ -88,16 +88,21 @@ async function getData() {
         //  document.getElementById('age').innerText = 'Age: ' + age;
         //  document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
         //  document.getElementById('description').innerText = description;
-         var breedEl= document.createElement("h2")
+        var imgEl= document.createElement("img") 
+        imgEl.setAttribute("src", dogImage)
+        imgEl.setAttribute("class", "dogImage")
+        var breedEl= document.createElement("h2")
          breedEl.textContent= 'Breed: ' + breed;
          var ageEl= document.createElement("h3")
          ageEl.textContent= 'Age: ' + age;
          var distanceEl= document.createElement("h2")
          distanceEl.textContent= 'Distance: ' + distance + ' Miles';
-         var imgEl= document.createElement("img") 
-         imgEl.setAttribute("src", dogImage)
-         imgEl.setAttribute("class", "dogImage")
+        //  var imgEl= document.createElement("img") 
+        //  imgEl.setAttribute("src", dogImage)
+        //  imgEl.setAttribute("class", "dogImage")
 
+         imgEl.style.height='50vh'
+         imgEl.style.width='auto'
          toggleCard.append(breedEl, ageEl, distanceEl, imgEl)
 
 
