@@ -145,6 +145,7 @@ img {
   color: #ecd9c6;
   font-family: "Hubballi", cursive;
   width: 75vw;
+  display: none;
 }
 
 #dogImg {

@@ -63,6 +63,7 @@ async function getData() {
    console.log(data.data);
 
   function generateCards () {
+      toggleCard.style.display="block";
     //this loops and shows 10 availble pets in the console
     for (i = 0; i < 10; i++) {
       var randomArr = data.data[i]
@@ -78,14 +79,27 @@ async function getData() {
         console.log(description)
         console.log(dogImage)
         console.log(distance)
+        console.log(randomArr)
 
         
         //this pulls speicifc data from the API and displays it in its designated element
-        var dogImageEl = document.getElementById('dogImg').innerText = dogImage;
-        var breedEl = document.getElementById('breed').innerText = 'Breed: ' + breed; 
-        var ageEl = document.getElementById('age').innerText = 'Age: ' + age;
-        var distanceEl = document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
-        var descriptionEl = document.getElementById('description').innerText = description;
+        //  document.getElementById('dogImg').setAttribute("src", dogImage)
+        // document.getElementById('breed').innerText = 'Breed: ' + breed; 
+        //  document.getElementById('age').innerText = 'Age: ' + age;
+        //  document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
+        //  document.getElementById('description').innerText = description;
+         var breedEl= document.createElement("h2")
+         breedEl.textContent= 'Breed: ' + breed;
+         var ageEl= document.createElement("h3")
+         ageEl.textContent= 'Age: ' + age;
+         var distanceEl= document.createElement("h2")
+         distanceEl.textContent= 'Distance: ' + distance + ' Miles';
+         var imgEl= document.createElement("img") 
+         imgEl.setAttribute("src", dogImage)
+         imgEl.setAttribute("class", "dogImage")
+
+         toggleCard.append(breedEl, ageEl, distanceEl, imgEl)
+
 
     }
 
