@@ -60,7 +60,6 @@ async function getData() {
        body: raw
    });
    const data = await response.json();
-   console.log(data.data);
 
   function generateCards () {
       toggleCard.style.display="block";
@@ -73,15 +72,6 @@ async function getData() {
         var dogImage = randomArr.attributes.pictureThumbnailUrl;
         var distance = randomArr.attributes.distance;
 
-
-        console.log(breed)
-        console.log(age)
-        console.log(name)
-        console.log(dogImage)
-        console.log(distance)
-        console.log(randomArr)
-
-        
         //this pulls speicifc data from the API and displays it in its designated element
         var imgEl= document.createElement("img") 
         imgEl.setAttribute("src", dogImage)
@@ -129,7 +119,6 @@ function funFacts () {
       // The API call was successful!
       return response.json();
     }).then(function (data) {
-      console.log(data);
       factsArr.push(data)
       localStorage.setItem("dogData", JSON.stringify(factsArr));
       var displayData = document.getElementById('funFactsHere');
