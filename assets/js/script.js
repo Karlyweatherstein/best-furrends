@@ -69,25 +69,20 @@ async function getData() {
       var randomArr = data.data[i]
         var breed = randomArr.attributes.breedPrimary;
         var age = randomArr.attributes.ageString;
-        var description = randomArr.attributes.descriptionText;
+        var name = randomArr.attributes.name;
         var dogImage = randomArr.attributes.pictureThumbnailUrl;
         var distance = randomArr.attributes.distance;
 
 
         console.log(breed)
         console.log(age)
-        console.log(description)
+        console.log(name)
         console.log(dogImage)
         console.log(distance)
         console.log(randomArr)
 
         
         //this pulls speicifc data from the API and displays it in its designated element
-        //  document.getElementById('dogImg').setAttribute("src", dogImage)
-        // document.getElementById('breed').innerText = 'Breed: ' + breed; 
-        //  document.getElementById('age').innerText = 'Age: ' + age;
-        //  document.getElementById('distance').innerText = 'Distance: ' + distance + ' Miles away';
-        //  document.getElementById('description').innerText = description;
         var imgEl= document.createElement("img") 
         imgEl.setAttribute("src", dogImage)
         imgEl.setAttribute("class", "dogImage")
@@ -97,21 +92,17 @@ async function getData() {
          ageEl.textContent= 'Age: ' + age;
          var distanceEl= document.createElement("h2")
          distanceEl.textContent= 'Distance: ' + distance + ' Miles';
-        //  var imgEl= document.createElement("img") 
-        //  imgEl.setAttribute("src", dogImage)
-        //  imgEl.setAttribute("class", "dogImage")
+         var nameEl= document.createElement("h2")
+         nameEl.textContent= 'Name: ' + name;
+
 
          imgEl.style.height='50vh'
          imgEl.style.width='auto'
-         toggleCard.append(breedEl, ageEl, distanceEl, imgEl)
+         toggleCard.append(imgEl, nameEl, breedEl, ageEl, distanceEl)
 
 
     }
 
-
-
-    
-    
     // this closes the modal after the search is generated
     span.onclick()
   }
